@@ -1,12 +1,18 @@
 {
   "name": "desc-app",
-  "version": "0.0.0",
+  "main": "main.js",
+  "version": "0.0.1",
+  "authors": "sc",
+  "description": "scapp",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve:ssr:soca14": "node dist/soca14/server/server.mjs",
+    "electron": "ng build --base-href ./ && electron .",
+    "dist": "ng build --base-href ./ && electron-builder"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +33,8 @@
     "@angular/cli": "^18.1.0",
     "@angular/compiler-cli": "^18.1.0",
     "@types/jasmine": "~5.1.0",
+    "electron": "^35.1.4",
+    "electron-builder": "^26.0.12",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -34,5 +42,13 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.5.2"
+  },
+  "build": {
+    "appId": "software.cantrips",
+    "productName": "SoftwareCantrips",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "files": ["**/*", "dist/soca14/browser/**"]
   }
 }
