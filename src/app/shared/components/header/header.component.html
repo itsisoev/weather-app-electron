@@ -2,7 +2,7 @@
   <div class="header-container__location">
     <div class="header-container__left">
       <div class="location">
-        <h3>Popular</h3>
+        <h3>{{city}}</h3>
         <svg id="location-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 11.938 16.711"
              class="sc-eDPEul gaAwuz">
           <path id="locationicon"
@@ -12,7 +12,7 @@
       </div>
 
       <div class="search">
-        <input type="text" placeholder="Address, City">
+        <input type="text"  [(ngModel)]="city" (ngModelChange)="onCityChange()" placeholder="Address, City">
 
         <div class="filter">Hourly</div>
         <div class="filter">7 Days</div>
