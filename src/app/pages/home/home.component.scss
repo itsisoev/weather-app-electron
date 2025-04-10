@@ -1,4 +1,9 @@
+:host {
+  flex: 1;
+}
+
 .home-container {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 1.875rem;
