@@ -1,9 +1,9 @@
 <div class="forecast-container">
   <div class="forecast-container__header">
-    <uc-search-bar [placeholder]="'Search for place'"/>
+    <uc-search-bar [placeholder]="'Search for place'" (searchChange)="onSearchChanged($event)" />
   </div>
 
   <div class="forecast-container__main">
-    <uc-weather-card/>
+    <uc-weather-card [weatherData]="weather()"/>
   </div>
 </div>
