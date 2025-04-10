@@ -2,15 +2,12 @@
 
 :root {
   --text-color: black;
-  --background-color: #eee;
-  --tw-bg-opacity: 1;
-  --card-background: rgb(252 252 252 / var(--tw-bg-opacity));
+  --background-color: white;
 }
 
 .dark-theme {
   --text-color: white;
-  --background-color: rgb(22 22 22 / var(--tw-bg-opacity));
-  --card-background: #1e1e1e;
+  --background-color: #1e1e1e;
 }
 
 * {
@@ -20,6 +17,7 @@
 }
 
 body {
+  color: var(--text-color);
   font-family: "Rubik", sans-serif;
   background-color: var(--background-color);
   transition: background-color 0.3s, color 0.3s;
