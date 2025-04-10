@@ -19,11 +19,11 @@
 
 ## 🧱 Технологии
 
-- **Angular 17**
-- **Electron 28+**
+- **Angular 18.1.0**
+- **Electron 35.1.4**
 - **RxJS / Signals / Services**
-- **Tailwind CSS / Angular Material**
-- **OpenWeather API**
+- **SCSS / Angular Material**
+- **Weatherapi**
 - **Firebase Auth / Firestore (по желанию)**
 - **LocalStorage, Interceptors, Guards**
 - **PWA-совместимость**
