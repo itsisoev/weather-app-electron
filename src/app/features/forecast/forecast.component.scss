@@ -1,0 +1,13 @@
+.forecast-container {
+  width: 33rem;
+  border-radius: 0.625rem;
+  padding: 1rem 2rem;
+  background-color: var(--card-background);
+
+  &__header {
+    margin-bottom: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

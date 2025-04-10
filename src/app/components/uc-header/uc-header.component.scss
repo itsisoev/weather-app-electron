@@ -1,0 +1,19 @@
+:host {
+  flex: 1;
+  display: flex;
+}
+
+.header-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &__link {
+    gap: 0.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
