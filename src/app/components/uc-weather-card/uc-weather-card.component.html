@@ -1,1 +1,32 @@
-<p>uc-weather-card works!</p>
+@if (weatherData()) {
+  <div class="weather-container">
+    <div class="weather-container__main">
+      <uc-sun />
+      <h1>{{ weatherData()?.current?.temp_c }} °C</h1>
+    </div>
+
+    <div class="weather-container__details">
+      <div class="weather-container__location-info">
+        <h3>{{ weatherData()?.location?.name }}</h3>
+        <p>
+          <span>{{ currentDate | date: 'EEEE,' }}</span> {{ currentDate | date: 'MMMM d' }}
+        </p>
+      </div>
+      <hr>
+      <div class="weather-container__extra-info">
+        <p>
+          <img [src]="'https:' + weatherData()?.current?.condition?.icon" alt="">
+          {{ weatherData()?.current?.condition?.text }}</p>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" height="25" viewBox="0 0 24 24"
+               stroke-width="2" stroke="currentColor"
+               aria-hidden="true" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          {{ currentDate | date: 'HH:mm' }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+}
