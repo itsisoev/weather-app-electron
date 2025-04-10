@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+:root {
+  --text-color: black;
+  --background-color: white;
+}
+
+.dark-theme {
+  --text-color: white;
+  --background-color: #1e1e1e;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +17,8 @@
 }
 
 body {
+  color: var(--text-color);
   font-family: "Rubik", sans-serif;
-  background-image: url('../assets/img/clearday_large.webp');
-  background-size: cover;
+  background-color: var(--background-color);
+  transition: background-color 0.3s, color 0.3s;
 }
