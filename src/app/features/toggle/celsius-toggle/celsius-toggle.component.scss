@@ -1,0 +1,15 @@
+.celsius-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 1.875rem;
+  font-size: 1rem;
+  border-radius: 1.875rem;
+  color: var(--text-color);
+  background-color: var(--card-background);
+}
+
+.celsius-btn.active {
+  background-color: var();
+}
