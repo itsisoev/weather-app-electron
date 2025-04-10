@@ -24,7 +24,7 @@
 - **RxJS / Signals / Services**
 - **SCSS / Angular Material**
 - **Weatherapi**
-- **Firebase Auth / Firestore (по желанию)**
+- **NestJS / PostSQL**
 - **LocalStorage, Interceptors, Guards**
 - **PWA-совместимость**
 
