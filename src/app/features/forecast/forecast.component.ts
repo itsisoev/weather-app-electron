@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, DestroyRef, effect, inject, OnInit, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, DestroyRef, effect, inject, OnInit, output, signal} from '@angular/core';
 import {UcSearchBarComponent} from "../../components/uc-search-bar/uc-search-bar.component";
 import {UcWeatherCardComponent} from "../../components/uc-weather-card/uc-weather-card.component";
 import {WeatherService} from "../../services/weather.service";
-import {CurrentWeather} from "../../models/weather";
+import {CurrentWeather, Weather7Days} from "../../models/weather";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 import {tap} from "rxjs";
 
@@ -18,8 +18,10 @@ import {tap} from "rxjs";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ForecastComponent implements OnInit {
-  weather = signal<CurrentWeather | null>(null);
+  weathers = output<Weather7Days>();
+
   searchPlace = signal<string>("Paris");
+  weather = signal<CurrentWeather | null>(null);
 
   private destroyRef = inject(DestroyRef)
   private weatherService = inject(WeatherService);

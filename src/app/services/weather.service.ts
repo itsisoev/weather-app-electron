@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment.development";
 import {Observable} from "rxjs";
-import {CurrentWeather} from "../models/weather";
+import {CurrentWeather, Weather7Days} from "../models/weather";
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +16,10 @@ export class WeatherService {
   getWeatherToday(city: string): Observable<CurrentWeather> {
     const url = `${this.BASE_URL}current.json?key=${this.API_KEY}&q=${city}`;
     return this.http.get<CurrentWeather>(url);
+  }
+
+  getWeather7Days(city: string): Observable<Weather7Days> {
+    const url = `${this.BASE_URL}forecast.json?key=${this.API_KEY}&q=${city}&days=7`;
+    return this.http.get<Weather7Days>(url);
   }
 }
