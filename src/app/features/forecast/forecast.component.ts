@@ -5,6 +5,7 @@ import {WeatherService} from "../../services/weather.service";
 import {CurrentWeather, Weather7Days} from "../../models/weather";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 import {tap} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-forecast',
@@ -23,6 +24,7 @@ export class ForecastComponent implements OnInit {
   searchPlace = signal<string>("Paris");
   weather = signal<CurrentWeather | null>(null);
 
+  private router = inject(Router);
   private destroyRef = inject(DestroyRef)
   private weatherService = inject(WeatherService);
 
@@ -42,9 +44,15 @@ export class ForecastComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.navigateToCity(this.searchPlace());
   }
 
   onSearchChanged(value: string) {
     this.searchPlace.set(value)
+    this.navigateToCity(value)
+  }
+
+  private navigateToCity(city: string) {
+    this.router.navigate(['/', city]);
   }
 }
