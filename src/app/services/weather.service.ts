@@ -18,8 +18,8 @@ export class WeatherService {
     return this.http.get<CurrentWeather>(url);
   }
 
-  getWeather7Days(city: string): Observable<Weather7Days> {
-    const url = `${this.BASE_URL}forecast.json?key=${this.API_KEY}&q=${city}&days=7`;
+  getWeather14Days(city: string): Observable<Weather7Days> {
+    const url = `${this.BASE_URL}forecast.json?key=${this.API_KEY}&q=${city}&days=14`;
     return this.http.get<Weather7Days>(url);
   }
 }

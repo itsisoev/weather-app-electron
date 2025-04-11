@@ -16,7 +16,7 @@ export class UcSearchBarComponent {
   placeholder = input<string>("")
   searchChange = output<string>();
 
-  search = "";
+  search: string = "";
 
   private searchSubject = new Subject<string>();
 

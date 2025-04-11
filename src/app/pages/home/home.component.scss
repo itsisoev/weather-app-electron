@@ -12,12 +12,15 @@
   &__right {
     flex: 1;
     display: flex;
-    align-items: start;
-    justify-content: flex-start;
+    flex-direction: column;
   }
 
   &__header {
-    flex: 1;
     display: flex;
+    align-items: start;
+  }
+
+  &__main {
+    margin-top: 3.125rem;
   }
 }
