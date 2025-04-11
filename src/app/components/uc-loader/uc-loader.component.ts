@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-uc-loader',
+  selector: 'uc-loader',
   standalone: true,
   imports: [],
   templateUrl: './uc-loader.component.html',

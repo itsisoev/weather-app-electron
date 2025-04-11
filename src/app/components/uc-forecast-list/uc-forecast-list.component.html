@@ -1,3 +1,12 @@
-<div class="forecast-container">
-  <div class="forecast-container__block"></div>
-</div>
+@if(true) {
+  <div class="forecast-container">
+    @for(weather of visibleForecast; track weather) {
+      <div class="forecast-container__block">
+        <p>{{ weather?.date | date: 'EEEE,' }} {{ weather?.date | date: 'MMMM d' }}</p>
+        <img [src]="'https:' + weather.day.condition.icon" alt="">
+        <p>Avg temp <span>{{weather.day.avgtemp_c}} °C</span></p>
+      </div>
+    }
+  </div>
+  <button (click)="toggleShowAll()" class="btn-more">{{showAll() ? 'Show 8 days' : 'Show additional days'}}</button>
+}
