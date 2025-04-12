@@ -145,18 +145,3 @@ export interface WeatherDay {
   condition: WeatherCondition;
   uv: number;
 }
-
-
-export interface Weather7Days {
-  forecast: {
-    [date: string]: {
-      date: string;
-      temperature: {
-        max: number;
-        min: number;
-      };
-      weather_icons: string[];
-      weather_descriptions: string[];
-    };
-  };
-}

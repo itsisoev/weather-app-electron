@@ -5,12 +5,14 @@ import {WeatherService} from "../../services/weather.service";
 import {ActivatedRoute} from "@angular/router";
 import {Weather14Days} from "../../models/weather";
 import {tap} from "rxjs";
+import {UcWeatherHighlightsComponent} from "../../components/uc-weather-highlights/uc-weather-highlights.component";
 
 @Component({
   selector: 'app-forecast-page',
   standalone: true,
   imports: [
-    UcForecastListComponent
+    UcForecastListComponent,
+    UcWeatherHighlightsComponent
   ],
   templateUrl: './forecast-page.component.html',
   styleUrl: './forecast-page.component.scss',

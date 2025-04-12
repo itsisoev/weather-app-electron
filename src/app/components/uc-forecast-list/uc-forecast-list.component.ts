@@ -20,11 +20,14 @@ export class UcForecastListComponent {
   showAll = signal<boolean>(false);
 
   get forecastArray(): WeatherForecastDay[] {
-    return this.weathers()?.forecast?.forecastday ?? [];
+    const forecast = this.weathers()?.forecast?.forecastday ?? [];
+    const today = new Date().toISOString().split('T')[0];
+
+    return forecast.filter(day => day.date !== today);
   }
 
   get visibleForecast(): WeatherForecastDay[] {
-    return this.showAll() ? this.forecastArray : this.forecastArray.slice(0, 8);
+    return this.showAll() ? this.forecastArray : this.forecastArray.slice(0, 6);
   }
 
   toggleShowAll(): void {

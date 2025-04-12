@@ -1,0 +1,22 @@
+.weather-container {
+  gap: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+
+  &__block {
+    width: 14.6rem;
+    height: 10rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    background-color: var(--card-background);
+
+    h3 {
+      margin-top: 1.6rem;
+    }
+
+    svg {
+      margin-top: 0.625rem;
+    }
+  }
+}
