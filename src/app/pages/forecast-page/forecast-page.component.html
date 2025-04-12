@@ -3,5 +3,8 @@
     <uc-forecast-list [weathers]="forecast()" />
   </div>
 
-  <div class="forecast-container__weather-info"></div>
+  <div class="forecast-container__weather-info">
+    <span>Today's Highlights</span>
+    <uc-weather-highlights [weatherInfo]="forecast()?.current" />
+  </div>
 </div>

@@ -1,0 +1,11 @@
+.forecast-container {
+  &__weather-info {
+    padding: 0.5rem;
+    margin-top: 1.875rem;
+
+    span {
+      font-size: 1.1875rem;
+      font-weight: 600;
+    }
+  }
+}

@@ -5,14 +5,13 @@
 
   &__block {
     padding: 1rem;
-    border-radius: 0.625rem;
     box-sizing: border-box;
-    flex: 0 0 calc(25% - 1rem);
+    border-radius: 0.625rem;
+    flex: 0 0 calc(30% - 1rem);
     background-color: var(--card-background);
 
     p:nth-of-type(2) {
      span {
-
        font-size: 1.125rem;
      }
     }
