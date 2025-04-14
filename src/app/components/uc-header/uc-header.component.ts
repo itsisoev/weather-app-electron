@@ -1,7 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {ThemeToggleComponent} from "../../features/toggle/theme-toggle/theme-toggle.component";
-import {CelsiusToggleComponent} from "../../features/toggle/celsius-toggle/celsius-toggle.component";
-import {FahrenheitToggleComponent} from "../../features/toggle/fahrenheit-toggle/fahrenheit-toggle.component";
+import {ThemeToggleComponent} from "../../features/theme-toggle/theme-toggle.component";
 import {UcSettingComponent} from "../uc-setting/uc-setting.component";
 
 @Component({
@@ -9,8 +7,6 @@ import {UcSettingComponent} from "../uc-setting/uc-setting.component";
   standalone: true,
   imports: [
     ThemeToggleComponent,
-    CelsiusToggleComponent,
-    FahrenheitToggleComponent,
     UcSettingComponent
   ],
   templateUrl: './uc-header.component.html',
