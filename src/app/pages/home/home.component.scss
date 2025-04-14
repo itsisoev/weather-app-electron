@@ -23,4 +23,21 @@
   &__main {
     margin-top: 3.125rem;
   }
+
+  @media (max-width: 1050px) {
+    &__header {
+      position: fixed;
+      top: 0.625rem;
+      left: 0.625rem;
+      right: 0.625rem;
+    }
+
+    &__left {
+      margin-top: 3.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.125rem;
+  }
 }

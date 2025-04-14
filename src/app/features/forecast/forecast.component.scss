@@ -11,4 +11,17 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 1050px) {
+    width: calc(100vw - 20vw);
+  }
+
+  @media (max-width: 768px) {
+    width: 23rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 21rem;
+    height: 100%;
+  }
 }

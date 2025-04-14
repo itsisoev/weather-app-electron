@@ -1,6 +1,14 @@
 .search-container {
   position: relative;
   width: 27.875rem;
+
+  @media (max-width: 1050px) {
+    width: calc(100vw - 30vw);
+  }
+
+  @media (max-width: 768px) {
+    width: 20rem;
+  }
 }
 
 .search-input {

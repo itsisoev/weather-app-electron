@@ -50,4 +50,45 @@
       height: 50px;
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+
+    &__main {
+      flex-direction: column;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    &__location-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+
+      h3 {
+        font-size: 1.125rem;
+      }
+    }
+
+    &__extra-info {
+      flex-direction: column;
+
+      p {
+        font-size: 0.9rem;
+        gap: 0.5rem;
+      }
+
+      p:nth-child(2) {
+        margin-left: 0;
+      }
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
 }
